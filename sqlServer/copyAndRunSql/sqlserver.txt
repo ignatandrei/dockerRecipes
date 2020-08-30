@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/mssql/server 
-ENV MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>
+FROM mcr.microsoft.com/mssql/server:2019-latest 
+ENV MSSQL_SA_PASSWORD=yourStrong(!)Password
 ENV ACCEPT_EULA=Y
 COPY ./emp.sql emp.sql
 RUN ( /opt/mssql/bin/sqlservr --accept-eula & ) | grep -q "Service Broker manager has started" \
-  && /opt/mssql-tools/bin/sqlcmd  -S . -U SA -P '<YourStrong!Passw0rd>' -i emp.sql             \
+  && /opt/mssql-tools/bin/sqlcmd  -S . -U sa -P 'yourStrong(!)Password' -i emp.sql             \
   && pkill sqlservr 
 EXPOSE 1433
