@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/mssql/server:2019-latest 
+FROM mcr.microsoft.com/mssql/server:2019-CU8-ubuntu-16.04
 ENV MSSQL_SA_PASSWORD=yourStrong(!)Password
 ENV ACCEPT_EULA=Y
 COPY ./emp.sql emp.sql
