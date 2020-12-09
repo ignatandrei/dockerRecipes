@@ -123,3 +123,9 @@ GO
 -- GO
 
 
+create view DepartmentEmployeeNumber
+as
+select d.IDDepartment, count(*)  as NrEmployee from Department d
+left outer join Employee e
+on d.IDDepartment = e.IDDepartment
+group by d.IDDepartment
