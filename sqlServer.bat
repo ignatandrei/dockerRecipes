@@ -1,0 +1,1 @@
+wt --title Sql -d sqlServer/copyAndRunSql/ 
