@@ -5,7 +5,8 @@ USE [tests]
 GO
 create table test(
 id int,
-name varchar(200)
+name varchar(200),
+createdOn datetime
 )
 /****** Object:  ForeignKey [FK_Employee_Department]    Script Date: 07/05/2010 01:50:15 ******/
 IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Employee_Department]') AND parent_object_id = OBJECT_ID(N'[dbo].[Employee]'))
