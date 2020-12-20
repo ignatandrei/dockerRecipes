@@ -1,1 +1,1 @@
-wt --title Sql -d sqlServer/copyAndRunSql/ 
+wt --title SqlServer -d sqlServer/copyAndRunSql/ ; --title postgres -d postgres/copyAndRunSql/
